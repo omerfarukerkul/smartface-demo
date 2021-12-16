@@ -27,8 +27,9 @@
 			"id": "64f5-2a6f-ab81-f44d",
 			"props": {
 				"children": [],
-				"name": "imageView1",
-				"parent": "80d7-ccd6-7729-9f08"
+				"name": "imgProfile",
+				"parent": "80d7-ccd6-7729-9f08",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -36,7 +37,8 @@
 			"type": "ImageView",
 			"userProps": {
 				"image": "placeholder_profile.png",
-				"testId": "J3AaFn6AF"
+				"testId": "J3AaFn6AF",
+				"usePageVariable": true
 			}
 		},
 		{
@@ -44,9 +46,10 @@
 			"id": "f18f-271c-5a57-4900",
 			"props": {
 				"children": [],
-				"name": "lbl",
+				"name": "lblProfile",
 				"parent": "80d7-ccd6-7729-9f08",
-				"text": "label1"
+				"text": "label1",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -54,7 +57,8 @@
 			"type": "Label",
 			"userProps": {
 				"testId": "lHG52_U70",
-				"text": "label1"
+				"text": "label1",
+				"usePageVariable": true
 			}
 		}
 	]

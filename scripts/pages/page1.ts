@@ -15,6 +15,10 @@ export default class Page1 extends Page1Design {
             this.router.push('/pages/page2', { message: 'Hello World!' });
         };
     }
+
+    initComponent(){
+        this.flProfile.userName = "Smartface demo Application";
+    }
 }
 
 /**
@@ -33,6 +37,7 @@ function onShow(this: Page1, superOnShow: () => void) {
 function onLoad(this: Page1, superOnLoad: () => void) {
     superOnLoad();
     console.info('Onload page1');
+    this.initComponent();
     this.headerBar.leftItemEnabled = false;
     this.headerBar.titleLayout = new PageTitleLayout();
     componentContextPatch(this.headerBar.titleLayout, 'titleLayout');

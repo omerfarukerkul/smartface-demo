@@ -147,7 +147,8 @@
 			"props": {
 				"children": [],
 				"name": "flProfile",
-				"parent": "34a8-113a-0f57-36d6"
+				"parent": "34a8-113a-0f57-36d6",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__",
@@ -164,7 +165,8 @@
 				},
 				"left": 0,
 				"testId": "Bv7nI_thb",
-				"top": 0
+				"top": 0,
+				"usePageVariable": true
 			}
 		},
 		{
