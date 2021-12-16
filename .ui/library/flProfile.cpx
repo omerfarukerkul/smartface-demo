@@ -1,0 +1,61 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flProfile",
+			"id": "80d7-ccd6-7729-9f08",
+			"props": {
+				"children": [
+					"64f5-2a6f-ab81-f44d",
+					"f18f-271c-5a57-4900"
+				],
+				"name": "flProfile",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": "16.13",
+				"testId": "Bv7nI_thb",
+				"top": "320.97"
+			}
+		},
+		{
+			"className": ".sf-imageView .flProfile-img",
+			"id": "64f5-2a6f-ab81-f44d",
+			"props": {
+				"children": [],
+				"name": "imageView1",
+				"parent": "80d7-ccd6-7729-9f08"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"image": "placeholder_profile.png",
+				"testId": "J3AaFn6AF"
+			}
+		},
+		{
+			"className": ".sf-label .flProfile-lbl",
+			"id": "f18f-271c-5a57-4900",
+			"props": {
+				"children": [],
+				"name": "lbl",
+				"parent": "80d7-ccd6-7729-9f08",
+				"text": "label1"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "lHG52_U70",
+				"text": "label1"
+			}
+		}
+	]
+}

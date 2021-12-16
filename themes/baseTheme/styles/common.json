@@ -1,1 +1,14 @@
-{}
+{
+	".sf": {
+		"&-label": {
+			"font": {
+				"size": 17,
+				"bold": true,
+				"italic": false,
+				"family": "SFProText",
+				"style": "Semibold"
+			},
+			"height": 50
+		}
+	}
+}

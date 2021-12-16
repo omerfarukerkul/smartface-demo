@@ -3,7 +3,7 @@
 		{
 			"className": ".sf-page",
 			"id": "7761adc8",
-			"initialized": false,
+			"initialized": true,
 			"props": {
 				"children": [
 					"a829471c",
@@ -28,8 +28,7 @@
 				"paddingRight": 16,
 				"safeAreaEnabled": true
 			},
-			"version": "6.15.1",
-			"degree": 0
+			"version": "6.15.1"
 		},
 		{
 			"className": ".sf-statusBar",
@@ -43,8 +42,7 @@
 			"type": "StatusBar",
 			"userProps": {
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
 			"className": ".sf-headerBar",
@@ -60,8 +58,7 @@
 			"userProps": {
 				"title": "Page2",
 				"visible": true
-			},
-			"degree": 1
+			}
 		},
 		{
 			"className": ".sf-label",
@@ -94,15 +91,14 @@
 				"height": 90,
 				"left": 0,
 				"multiline": true,
+				"testId": "dtgphCYa4b",
 				"text": "Page2",
 				"textAlignment": "MIDCENTER",
 				"textColor": "rgba( 210, 210, 210, 1 )",
 				"top": 0,
 				"usePageVariable": true,
-				"width": null,
-				"testId": "dtgphCYa4b"
-			},
-			"degree": 1
+				"width": null
+			}
 		},
 		{
 			"className": ".sf-button",
@@ -112,7 +108,7 @@
 				"children": [],
 				"name": "btnSayHello",
 				"parent": "7761adc8",
-				"text": "Say Hello",
+				"text": "SmartFace Button",
 				"usePageVariable": true
 			},
 			"type": "Button",
@@ -123,13 +119,12 @@
 					"positionType": "RELATIVE"
 				},
 				"left": 0,
-				"text": "Say Hello",
+				"testId": "6SWaorSDtL",
+				"text": "SmartFace Button",
 				"top": 0,
 				"usePageVariable": true,
-				"width": null,
-				"testId": "6SWaorSDtL"
-			},
-			"degree": 1
+				"width": null
+			}
 		}
 	]
 }
