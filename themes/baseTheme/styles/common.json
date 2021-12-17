@@ -9,6 +9,13 @@
 				"style": "Semibold"
 			},
 			"height": 50
+		},
+		"&-listView": {
+			"flexProps": {},
+			"height": null
+		},
+		"&-listViewItem": {
+			"height": null
 		}
 	}
 }

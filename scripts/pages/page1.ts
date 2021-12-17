@@ -16,7 +16,7 @@ export default class Page1 extends Page1Design {
         };
     }
 
-    initComponent(){
+    initComponent() {
         this.flProfile.userName = "Smartface demo Application";
     }
 }

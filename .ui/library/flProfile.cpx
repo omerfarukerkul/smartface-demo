@@ -2,6 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout .flProfile",
+			"hiddenComponent": true,
 			"id": "80d7-ccd6-7729-9f08",
 			"props": {
 				"children": [
@@ -17,9 +18,9 @@
 			"type": "FlexLayout",
 			"userProps": {
 				"flexProps": {},
-				"left": "16.13",
+				"left": "15.94",
 				"testId": "Bv7nI_thb",
-				"top": "320.97"
+				"top": "237.68"
 			}
 		},
 		{
@@ -36,6 +37,7 @@
 			},
 			"type": "ImageView",
 			"userProps": {
+				"borderColor": "rgba( 255, 255, 255, 0 )",
 				"image": "placeholder_profile.png",
 				"testId": "J3AaFn6AF",
 				"usePageVariable": true

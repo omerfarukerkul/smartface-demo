@@ -9,7 +9,8 @@
 		"&-img": {
 			"width": 60,
 			"height": null,
-			"imageFillType": "ASPECTFIT"
+			"imageFillType": "ASPECTFIT",
+			"borderRadius": 30
 		},
 		"&-lbl": {
 			"flexProps": {
@@ -19,6 +20,8 @@
 			"height": null,
 			"width": null
 		},
-		"imageFillType": "ASPECTFIT"
+		"imageFillType": "ASPECTFIT",
+		"marginBottom": 0,
+		"marginTop": 0
 	}
 }
