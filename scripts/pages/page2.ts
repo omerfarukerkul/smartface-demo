@@ -1,7 +1,9 @@
 import Page2Design from 'generated/pages/page2';
-import { getCombinedStyle } from '@smartface/extension-utils/lib/getCombinedStyle';
 import LviProfile from 'components/LviProfile';
 import * as RandomUserService from "api/randomuser";
+import PageTitleLayout from 'components/PageTitleLayout';
+import componentContextPatch from '@smartface/contx/lib/smartface/componentContextPatch';
+import System from '@smartface/native/device/system';
 
 type AsyncReturnType<T extends (...args: any) => any> = 
     T extends (...args: any) => Promise<infer U> ? U : 
@@ -25,9 +27,11 @@ export default class Page2 extends Page2Design {
         }
 
         this.lvMain.onRowBind = (item: LviProfile, index: number) => {
-            console.log(this.dataList);
             item.userName = this.dataList[index]?.name.first || '';
             item.imageSource = this.dataList[index].picture.large;
+            item.onTouchEnded = () => {
+                this.router.push('/pages/ProfilePage', { routeData: this.dataList[index]});
+            };
         };
         this.lvMain.onPullRefresh = () => {
             //this.refreshListView();
@@ -53,6 +57,7 @@ export default class Page2 extends Page2Design {
  */
 function onShow(this: Page2, superOnShow: () => void) {
     superOnShow();
+    this.headerBar.titleLayout.applyLayout();
     this.serviceCall();
 }
 
@@ -63,4 +68,10 @@ function onShow(this: Page2, superOnShow: () => void) {
 function onLoad(this: Page2, superOnLoad: () => void) {
     superOnLoad();
     this.initListView();
+    this.headerBar.leftItemEnabled = true;
+    this.headerBar.titleLayout = new PageTitleLayout();
+    componentContextPatch(this.headerBar.titleLayout, 'titleLayout');
+    if (System.OS === 'Android') {
+        this.headerBar.title = '';
+    }
 }

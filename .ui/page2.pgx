@@ -2,13 +2,13 @@
 	"components": [
 		{
 			"className": ".sf-page #page2",
-			"id": "7761adc8",
-			"initialized": true,
+			"id": "286a-13c2-1349-653c",
+			"initialized": false,
 			"props": {
 				"children": [
-					"a829471c",
-					"35f1c1a1",
-					"9a64-7e19-ef5b-ac45"
+					"dc06-b421-1023-e12c",
+					"b06c-9ef2-282a-b9cc",
+					"f40a-2bbe-a69d-6559"
 				],
 				"isRemovable": true,
 				"name": "page2",
@@ -25,12 +25,12 @@
 		},
 		{
 			"className": ".sf-statusBar",
-			"id": "a829471c",
+			"id": "dc06-b421-1023-e12c",
 			"props": {
 				"children": [],
 				"isRemovable": false,
 				"name": "statusBar",
-				"parent": "7761adc8"
+				"parent": "286a-13c2-1349-653c"
 			},
 			"type": "StatusBar",
 			"userProps": {
@@ -39,12 +39,12 @@
 		},
 		{
 			"className": ".sf-headerBar",
-			"id": "35f1c1a1",
+			"id": "b06c-9ef2-282a-b9cc",
 			"props": {
 				"children": [],
 				"isRemovable": false,
 				"name": "headerBar",
-				"parent": "7761adc8",
+				"parent": "286a-13c2-1349-653c",
 				"title": "Page2"
 			},
 			"type": "HeaderBar",
@@ -55,13 +55,13 @@
 		},
 		{
 			"className": ".sf-listView #page2-lvMain",
-			"id": "9a64-7e19-ef5b-ac45",
+			"id": "f40a-2bbe-a69d-6559",
 			"props": {
 				"children": [
-					"5001-5412-52cc-0f1b"
+					"15f8-4a4f-36d3-baf2"
 				],
 				"name": "lvMain",
-				"parent": "7761adc8",
+				"parent": "286a-13c2-1349-653c",
 				"usePageVariable": true
 			},
 			"type": "ListView",
@@ -73,11 +73,11 @@
 		{
 			"className": ".sf-listViewItem .lviProfile",
 			"hiddenComponent": false,
-			"id": "5001-5412-52cc-0f1b",
+			"id": "15f8-4a4f-36d3-baf2",
 			"props": {
 				"children": [],
 				"name": "lviProfile",
-				"parent": "9a64-7e19-ef5b-ac45"
+				"parent": "f40a-2bbe-a69d-6559"
 			},
 			"source": {
 				"page": "__library__",

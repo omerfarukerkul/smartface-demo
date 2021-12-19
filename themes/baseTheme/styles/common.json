@@ -1,21 +1,21 @@
 {
-	".sf": {
-		"&-label": {
-			"font": {
-				"size": 17,
-				"bold": true,
-				"italic": false,
-				"family": "SFProText",
-				"style": "Semibold"
-			},
-			"height": 50
-		},
-		"&-listView": {
-			"flexProps": {},
-			"height": null
-		},
-		"&-listViewItem": {
-			"height": null
+	".flMapView": {
+		"flexProps": {},
+		"height": 343
+	},
+	".flMap": {
+		"flexProps": {
+			"flexGrow": 1
+		}
+	},
+	".lvUserProps": {
+		"flexProps": {
+			"flexGrow": 1
+		}
+	},
+	".svUser": {
+		"flexProps": {
+			"flexGrow": 1
 		}
 	}
 }

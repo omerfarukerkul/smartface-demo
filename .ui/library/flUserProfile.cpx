@@ -1,0 +1,43 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flUserProfile",
+			"hiddenComponent": true,
+			"id": "6fb8-1001-871d-1378",
+			"props": {
+				"children": [
+					"10b8-fc9e-280d-e61a"
+				],
+				"name": "flUserProfile",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"testId": "gMtAMAbhC"
+			}
+		},
+		{
+			"className": ".sf-label .flUserProfile-lbl",
+			"id": "10b8-fc9e-280d-e61a",
+			"props": {
+				"children": [],
+				"name": "flUserLabel",
+				"parent": "6fb8-1001-871d-1378",
+				"text": "TestLabel",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"text": "TestLabel",
+				"usePageVariable": true
+			}
+		}
+	]
+}

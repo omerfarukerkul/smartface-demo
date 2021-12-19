@@ -38,7 +38,7 @@ function onLoad(this: Page1, superOnLoad: () => void) {
     superOnLoad();
     console.info('Onload page1');
     this.initComponent();
-    this.headerBar.leftItemEnabled = false;
+    this.headerBar.leftItemEnabled = true;
     this.headerBar.titleLayout = new PageTitleLayout();
     componentContextPatch(this.headerBar.titleLayout, 'titleLayout');
     if (System.OS === 'Android') {
