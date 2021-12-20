@@ -12,7 +12,7 @@ export default class Page1 extends Page1Design {
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
         this.btnNext.onPress = () => {
-            this.router.push('/pages/page2', { message: 'Hello World!' });
+            this.router.push('page2', { message: 'Hello World!' });
         };
     }
 

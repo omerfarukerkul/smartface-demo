@@ -30,7 +30,7 @@ export default class Page2 extends Page2Design {
             item.userName = this.dataList[index]?.name.first || '';
             item.imageSource = this.dataList[index].picture.large;
             item.onTouchEnded = () => {
-                this.router.push('/pages/ProfilePage', { routeData: this.dataList[index]});
+                this.router.push('ProfileDesignPage', { routeData: this.dataList[index]});
             };
         };
         this.lvMain.onPullRefresh = () => {

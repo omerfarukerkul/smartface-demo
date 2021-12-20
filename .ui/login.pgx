@@ -1,0 +1,128 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "5f4a-5118-caf0-371e",
+			"initialized": true,
+			"props": {
+				"children": [
+					"2493-d720-6fad-3220",
+					"1c0f-7b7b-4a61-b7ab",
+					"9125-9937-13b4-2c22",
+					"e9cc-cd3c-0c57-1691",
+					"9c79-34e5-e17b-be7c"
+				],
+				"name": "login",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "0.0.1.a"
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "2493-d720-6fad-3220",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "5f4a-5118-caf0-371e"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "1c0f-7b7b-4a61-b7ab",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "5f4a-5118-caf0-371e",
+				"title": "login"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "login"
+			}
+		},
+		{
+			"className": ".flexLayout .materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "9125-9937-13b4-2c22",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mbUserName",
+				"parent": "5f4a-5118-caf0-371e",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "materialTextBox",
+				"id": "574a-10da-b765-48e5"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"testId": "jmX5lmZxy",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".flexLayout .materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "e9cc-cd3c-0c57-1691",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mbPassword",
+				"parent": "5f4a-5118-caf0-371e",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "materialTextBox",
+				"id": "574a-10da-b765-48e5"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"testId": "zRXbv326i",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button",
+			"id": "9c79-34e5-e17b-be7c",
+			"props": {
+				"children": [],
+				"name": "btnLogin",
+				"parent": "5f4a-5118-caf0-371e",
+				"text": "button1",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"testId": "b1sMg4a_P",
+				"text": "button1",
+				"usePageVariable": true
+			}
+		}
+	]
+}
