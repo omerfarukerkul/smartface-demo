@@ -28,7 +28,7 @@ export default class ProfileDesignPage extends ProfileDesignPageDesign {
 
         // TODO Burasi calismiyor veya ekranda gorunmuyor.
         this.lvUserDetails.onRowBind = (item: LviUserProfile, index: number) => {
-            item.textField = Object.keys(Object.entries(userData)[index][1])[0] + ': ' + Object.values(Object.entries(userData)[index][1])[0];
+            item.textField = Object.keys(Object.entries(userData)[index][1])[0] + ': ' +Object.values(Object.entries(userData)[index][1])[0];
         }
         this.lvUserDetails.onRowHeight = (index: number) => {
             return LviUserProfile.getHeight();
