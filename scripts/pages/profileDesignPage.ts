@@ -6,34 +6,49 @@ import ProfileDesignPageDesign from 'generated/pages/profileDesignPage';
 export default class ProfileDesignPage extends ProfileDesignPageDesign {
     router: any;
     routeData: User;
-	constructor() {
-		super();
-		// Overrides super.onShow method
-		this.onShow = onShow.bind(this, this.onShow.bind(this));
-		// Overrides super.onLoad method
-		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-	}
-
-
-    initListView(){
-        this.flProfile.imageSource = this.routeData.picture.medium;
-        this.flProfile.lblProfile.text = this.routeData.name.title + ' ' +this.routeData.name.first + ' ' +this.routeData.name.last;
-        // TODO Burasi calismiyor veya ekranda gorunmuyor.
-        this.lvUserDetails.onRowBind = (item: LviUserProfile, index: number) => {
-            console.log('row: '+ index+1 + ' item: '+ JSON.stringify(item));
-        }
-        this.lvUserDetails.onRowHeight = (index: number) => {
-            console.log('onRowHeight');
-            return LviUserProfile.getHeight();
-        }
+    constructor() {
+        super();
+        // Overrides super.onShow method
+        this.onShow = onShow.bind(this, this.onShow.bind(this));
+        // Overrides super.onLoad method
+        this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
     }
 
-    initMapView(){
+
+    initListView() {
+        const userData = [
+            { "gender": this.routeData.gender as string },
+            { "name": (this.routeData.name.title + ' ' + this.routeData.name.first + ' ' + this.routeData.name.last) as string },
+            { "email": this.routeData.email as string },
+            { "phone": this.routeData.phone as string }
+        ];
+        this.lvUserDetails.itemCount = Object.entries(userData).length;
+        this.flProfile.imageSource = this.routeData.picture.medium;
+        this.flProfile.lblProfile.text = Object.values(userData)[1].name;
+
+        // TODO Burasi calismiyor veya ekranda gorunmuyor.
+        this.lvUserDetails.onRowBind = (item: LviUserProfile, index: number) => {
+            item.textField = Object.keys(Object.entries(userData)[index][1])[0] + ': ' + Object.values(Object.entries(userData)[index][1])[0];
+        }
+        this.lvUserDetails.onRowHeight = (index: number) => {
+            return LviUserProfile.getHeight();
+        }
+        this.lvUserDetails.onPullRefresh = () => {
+            //this.refreshListView();
+            this.lvUserDetails.stopRefresh();
+        };
+    }
+
+    refreshData() {
+        this.lvUserDetails.refreshData();
+    }
+
+    initMapView() {
         const centerLocation = {
             latitude: +this.routeData.location.coordinates.latitude,
             longitude: +this.routeData.location.coordinates.longitude
         };
-        this.flMapView.setCenterLocationWithZoomLevel(centerLocation,11,false);
+        this.flMapView.setCenterLocationWithZoomLevel(centerLocation, 11, false);
         const myPin = new MapView.Pin({
             location: centerLocation,
             title: this.routeData.name.first
@@ -49,7 +64,8 @@ export default class ProfileDesignPage extends ProfileDesignPageDesign {
  * @param {Object} parameters passed from Router.go function
  */
 function onShow(this: ProfileDesignPage, superOnShow: () => void) {
-	superOnShow();
+    superOnShow();
+    this.refreshData();
 }
 
 /**
@@ -58,7 +74,7 @@ function onShow(this: ProfileDesignPage, superOnShow: () => void) {
  * @param {function} superOnLoad super onLoad function
  */
 function onLoad(this: ProfileDesignPage, superOnLoad: () => void) {
-	superOnLoad();
+    superOnLoad();
     this.initListView();
     this.initMapView();
 }

@@ -9,7 +9,7 @@ export default class LviUserProfile extends LviUserProfileDesign {
 		this.pageName = pageName;
 	}
 
-    set textFiled(value: string) {
+    set textField(value: string) {
         this.flUserProfile.flUserLabel.text = value;
     }
 
@@ -18,7 +18,7 @@ export default class LviUserProfile extends LviUserProfileDesign {
     }
 
     static getHeight() {
-        return getCombinedStyle('.lviUserProfile').height || 65;
+        return getCombinedStyle('.lviUserProfile').height || 0;
     }
 
 }
