@@ -19,4 +19,4 @@ Application.onUnhandledError = function (e: UnhandledError) {
     });
 };
 
-router.push('/pages/login');
+router.push('/pages/page1');

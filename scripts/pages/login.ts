@@ -1,6 +1,7 @@
 import Button from '@smartface/native/ui/button';
 import * as ReqResService from 'api/reqres';
 import LoginDesign from 'generated/pages/login';
+import { getToken } from 'lib/token';
 
 export default class Login extends LoginDesign {
     router: any;
@@ -16,6 +17,10 @@ export default class Login extends LoginDesign {
         const result = await ReqResService.login({
             email: this.mbUserName.materialTextBox.text,
             password: this.mbPassword.materialTextBox.text
+        }).then(p => {
+            if(p.token != null && p.token.length > 0){
+                this.router.dismiss();
+            }
         });
         return result;
     }
@@ -39,6 +44,7 @@ export default class Login extends LoginDesign {
             this.router.push('page2');
         });
     }
+
 }
 
 /**

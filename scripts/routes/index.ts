@@ -6,6 +6,15 @@ import {
 } from '@smartface/router';
 import * as Pages from 'pages';
 import '@smartface/extension-utils/lib/router/goBack'; // Implements onBackButtonPressed
+import BackClose from '@smartface/extension-utils/lib/router/back-close'
+import { matchUrl } from '@smartface/router/lib/common/matchPath';
+
+BackClose.dismissBuilder = (match, routeData, router, pageInstance, pageProps, route) => {
+    if(match.url == '/pages/login/main'){
+        return {text: '', position: BackClose.DismissPosition.RIGHT }
+    }
+    return { text: global.lang.done, position: BackClose.DismissPosition.RIGHT, }
+}
 
 const router = Router.of({
     path: '/',
@@ -35,13 +44,21 @@ const router = Router.of({
                         headerBarStyle: { visible: true },
                     }),
                 }),
-                Route.of({
+                StackRouter.of({
                     path: '/pages/login',
-                    build: buildExtender({
-                        getPageClass: () => Pages.Login,
-                        headerBarStyle: { visible: true },
-                    }),
-                }),
+                    to: '/pages/login/main',
+                    modal: true,
+                    routes: [
+                        Route.of({
+                            path: '/pages/login/main',
+                            build: buildExtender({
+                                getPageClass: () => Pages.Login,
+                                headerBarStyle: { visible: true },
+                            }),
+                        }),
+                    ]
+                })
+                
             ],
         }),
     ],

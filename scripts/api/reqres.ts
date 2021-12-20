@@ -1,4 +1,5 @@
 import { reqresService } from "api";
+import { setToken } from "lib/token";
 
 type User = {
     data: {
@@ -23,9 +24,15 @@ type Login = {
     password: string;
 }
 
+type LoginResponse = {
+    token: string;
+}
+
 export async function login(params:Login) {
-    return await reqresService.request('/login', {
+    const result: LoginResponse = await reqresService.request('/login', {
         method: 'POST',
         body: params
     });
+    setToken(result.token);
+    return result;
 }
