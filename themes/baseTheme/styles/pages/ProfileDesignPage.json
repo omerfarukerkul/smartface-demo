@@ -29,7 +29,8 @@
 					"flexGrow": 1
 				},
 				"height": null
-			}
+			},
+			"marginTop": 40
 		}
 	}
 }

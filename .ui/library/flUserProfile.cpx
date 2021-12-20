@@ -35,7 +35,15 @@
 			},
 			"type": "Label",
 			"userProps": {
+				"font": {
+					"size": 14,
+					"bold": false,
+					"italic": false,
+					"family": "SFProDisplay",
+					"style": "Medium"
+				},
 				"text": "TestLabel",
+				"textColor": "rgba( 182, 191, 197, 1 )",
 				"usePageVariable": true
 			}
 		}
